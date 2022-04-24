@@ -1,0 +1,10 @@
+<div id="nav__bar">
+    <div class="nav__items">
+        <div *ngFor="let navBarItem of navBarItemList">
+            <a href="#{{navBarItem.title}}" class="nav__item" [ngClass]="navBarItem.selected ? 'selected' : ''" (click)="changeTab(navBarItem)">
+                <i [ngClass]="navBarItem.selected ? '' : 'nav__icon__color'" class="{{navBarItem.icon}}"></i>
+                {{ navBarItem.title }}
+            </a>
+        </div>
+    </div>
+</div>
